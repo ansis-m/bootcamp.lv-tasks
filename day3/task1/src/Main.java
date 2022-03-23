@@ -4,15 +4,15 @@ public class Main {
 
     static class Table {
 
-        private int[][] table = new int[10][10];
+        private static int[][] table = new int[10][10];
 
-        Table() {
+        static {
             for (int i = 0; i < 10; i++)
                 for (int j = 0; j < 10; j++)
                     table[i][j] = (i + 1) * (j + 1);
         }
 
-        int result(int a, int b){
+        static int result(int a, int b){
             return table[a - 1][b - 1];
         }
     }
@@ -21,7 +21,6 @@ public class Main {
 
         int a;
         int b;
-        Table table = new Table();
         Scanner scanner = new Scanner(System.in);
 
         while(true){
@@ -52,6 +51,6 @@ public class Main {
             }
         }
 
-        System.out.println(a + " multiplied by " + b + " equals " + table.result(a, b));
+        System.out.println(a + " multiplied by " + b + " equals " + Table.result(a, b));
     }
 }
