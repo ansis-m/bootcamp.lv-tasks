@@ -1,10 +1,10 @@
 public class Vehicle {
     
-    private int speed;
-    private int distance;
-    private int gear;
-    private final String[] directions = {"North", "East", "South", "West"};
-    private int direction;
+    protected int speed;
+    protected int distance;
+    protected int gear;
+    protected final String[] directions = {"North", "East", "South", "West"};
+    protected int direction;
 
     Vehicle(){
         this.speed = 0;
@@ -52,19 +52,18 @@ public class Vehicle {
     }
     
     public int getSpeed(){
+        System.out.printf("The current speed is %d\n", this.speed);
         return this.speed;
     }
 
     public int getDistance(){
+        System.out.printf("The distance so far is %d\n", this.distance);
         return this.distance;
     }
 
     public String getDirection(){
+        System.out.printf("The current direction is %s\n", this.directions[direction]);
         return directions[direction];
     }
 
 }
-
-//// Program should be able to handle steering, changing gears, and drive (having speed in other words).
-//// You might decide where to put the appropriate state and behaviours (fields and methods).
-//// As mentioned above, changing gears, increasing/decreasing speed of driving should be included.
