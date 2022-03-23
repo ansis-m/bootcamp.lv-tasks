@@ -2,8 +2,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class BankAccount {
 
-//    * method for transfer balance from one bank account to another
-    double balance;
+    private double balance;
 
     BankAccount(){
         this.balance = 0;
@@ -36,10 +35,5 @@ public class BankAccount {
         this.balance -= amount;
         account.deposit(amount);
     }
-
-    public static void main(String[] args) {
-	    System.out.println("in progress");
-    }
-
 
 }
