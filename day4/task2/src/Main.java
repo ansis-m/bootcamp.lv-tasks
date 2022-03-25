@@ -13,7 +13,7 @@ public class Main {
         System.out.printf("There are %d words in the TEXT\n", words.length);
         System.out.printf("There are %d unique words in the TEXT not ignoring the case\n", new HashSet<String>(Arrays.asList(words1)).size());
         System.out.printf("There are %d unique words in the TEXT ignoring the case", targetSet.size());
-        
+
     }
 }
 
