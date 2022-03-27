@@ -1,7 +1,6 @@
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println("this sucks");
 
 //        Honda civic = new Honda("red", 2014, "civic");
 //        civic.accelerate(60);
