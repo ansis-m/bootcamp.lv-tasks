@@ -19,7 +19,9 @@ public class Vehicle {
         this.speed = this.speed + 10 > 100 ? 100 : this.speed + 10;
     }
 
-    public void accelerate(int a){
+    public void accelerate(int a) throws IllegalArgumentException {
+        if(a < 0)
+            throw new IllegalArgumentException("negative acceleration!");
         this.speed = this.speed + a > 100 ? 100 : this.speed + a;
     }
 
@@ -37,7 +39,7 @@ public class Vehicle {
 
     public void turnLeft(){
         if(this.direction == 0)
-            this.direction = 4;
+            this.direction = 3;
         else
             this.direction--;
     }
@@ -50,7 +52,7 @@ public class Vehicle {
     }
 
     public void drive(int time){
-        this.distance += time * this.speed;
+        distance += time * speed;
     }
 
     public int getSpeed(){
